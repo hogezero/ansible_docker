@@ -1,0 +1,5 @@
+- hosts: debian11
+  become: yes
+  become_method: su
+  roles:
+    - docker

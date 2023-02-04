@@ -1,0 +1,10 @@
+- name: "dockerグループにユーザを追加"
+  user:
+    name: "{{ansible_user_id}}"
+    groups: docker
+    append: yes
+
+- name: dockerデーモンをリセット
+  service:
+    name: docker
+    state: restarted
